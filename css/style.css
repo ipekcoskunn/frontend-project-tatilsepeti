@@ -754,4 +754,13 @@
     .search-panel {
         margin-bottom: 10px;
     }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .footer-copyright .right-copy {
+        margin-top: 10px;
+        display: block;
+    }
 }

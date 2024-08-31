@@ -4,11 +4,633 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Tatil Sepeti</title>
 </head>
 
 <body>
+    <header>
+        <div class="header-info-area">
+            <div class="container">
+                <div class="row flex-row">
+                    <div class="header-left-info col-3">
+                        <a href="#">
+                            <img class="logo-img" width="211" height="52"
+                                src="https://cdn.tatilsepeti.com/wwwroot/images/tatilsepeti-logo2.svg"></img>
+                        </a>
+                    </div>
+                    <div class="header-right-info col-9">
+                        <div class="row flex-row">
+                            <div class="right-info-menu">
+                                <ul>
+                                    <li>
+                                        <a class="info-phone">
+                                            <i class="fa-solid fa-phone"></i>
+                                            444 44 20
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/" class="info-sales-offices">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            Satış Ofisleri
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/" class="info-notifications">
+                                            <i class="fa-solid fa-bell"></i>
+                                            Bildirimler
+                                        </a>
+                                    </li>
+                                    <li><a href="/" class="info-sign-up">Kayıt Ol</a></li>
+                                    <li>
+                                        <a href="/" class="info-login">
+                                            <i class="fa-solid fa-user"></i>
+                                            Giriş Yap
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-main-menu">
+            <div class="container">
+                <div class="megamenu" id="otelMegaMenu"
+                    style="position: absolute; top: 12%; background-color: wheat; height: fit-content; z-index: 9; display: none;padding:20px;">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <ul>
+                            <li>test</li>
+                            <li>test1</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <ul>
+                            <li>test</li>
+                            <li>test2</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <ul>
+                            <li>test</li>
+                            <li>test4</li>
+                            <li>test3</li>
+                            <li>test2</li>
+                            <li>test2</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="megamenuImage">
+                            <img src="https://cdn.tatilsepeti.com/Files/Banner/0388/765x240sn-1.jpg"
+                                style="width:100%;" />
+                        </div>
+                    </div>
+                </div>
+                <nav class="bigmegamenu">
+                    <ul>
+                        <li class="dropdown-items" id="menuOtel">
+                            <a>OTEL</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <li>TUR</li>
+                        <li>GEMİ</li>
+                        <li>UÇAK BİLETİ</li>
+                        <li>ARAÇ</li>
+                        <li>UÇAKLI PAKET</li>
+                        <li>BALAYI OTELLERİ</li>
+                        <li>SON DAKİKA OTELLERİ</li>
+                        <li>KIBRIS OTELLERİ</li>
+                        <li>FIRSATLAR</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="col-12 mobile-menu-header">
+                <div class="col-9">
+                    <i class="fa-solid fa-bars" onclick="mobileMenuOpen();" id="openMenu"></i>
+                    <i class="fa-solid fa-xmark" onclick="mobileMenuClose();" id="closeMenu" style="display:none;"></i>
+                    <img class="logo-img" width="150" height="50"
+                        src="https://cdn.tatilsepeti.com/wwwroot/images/tatilsepeti-logo2.svg">
+                </div>
+                <div class="col-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-bell"><span class="notif"></span></i>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mobile-menu-open" style="display:none;" id="mobile-menu-open">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-bed"></i>
+                                Otel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-bus"></i>
+                                Tur
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-ship"></i>
+                                Gemi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-plane"></i>
+                                Uçak
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-car"></i>
+                                Araç
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-heart"></i>
+                                Balayı Otelleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                Fırsatlar
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col-12">
+                        <div class="mobile-menu-buttons">
+                            <a href="" class="mobile-btn login">
+                                Giriş Yap
+                            </a>
+                            <a href="" class="mobile-btn register">
+                                Kayıt Ol
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile-seperator">Tatilsepeti</div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-bell-concierge"></i> Müşteri Hizmetleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-briefcase"></i> Hakkımızda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-location-dot"></i> Satış Ofisleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-map"></i> Tatil Rehberi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-mobile"></i> Uygulama İndir
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col-12">
+                        <div class="mobile-seperator">Sosyal Medya</div>
+                    </div>
+                    <div class="col-12 socialMediaIcons">
+                        <div class="socialMedia"><a href=""><i class="fa-brands fa-facebook-f"></i></a></div>
+                        <div class="socialMedia"><a href=""><i class="fa-brands fa-x-twitter"></i></a></div>
+                        <div class="socialMedia"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                        <div class="socialMedia"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+                        <div class="socialMedia"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="filter-slider-section mt-20">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <div class="search-tabs">
+                        <div class="tabs-navbar">
+                            <a href="#" id="otel">
+                                <i class="fa-solid fa-bed"></i>
+                                Otel
+                            </a>
+                            <a href="#" id="tur">
+                                <i class="fa-solid fa-suitcase"></i>
+                                Paket Tur
+                            </a>
+                            <a href="#" id="ucak">
+                                <i class="fa-solid fa-plane"></i>
+                                Uçak
+                            </a>
+                        </div>
+                        <div class="tab"></div>
+                        <div class="tab"></div>
+                    </div>
+                    <div class="search-panel" id="otelPanel">
+                        <div class="form-group col-lg-12 col-sm-12">
+                            <h5 class="search-panel-title">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Tatil Ara
+                            </h5>
+                            <label class="" for="bolge">Bölge / Otel / Kampanya</label>
+                            <input type="text" class="form-control form-control-sm" id="bolge"
+                                placeholder="Şehir, ilçe veya tatil bölgesi yazınız">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="start-date">Giriş Tarihi</label>
+                                    <input type="date" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="start-date">Çıkış Tarihi</label>
+                                    <input type="date" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="adult">Yetişkin</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="child">Çocuk</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="only-avaliable-hotels">
+                                <label class="form-check-label" for="only-avaliable-hotels">
+                                    Sadece Müsait Oteller
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="search-btn btn btn-primary">Otel Ara</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-panel" id="ucakPanel" style="display:none;">
+                        <div class="form-group col-lg-12 col-sm-12">
+                            <h5 class="search-panel-title">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Uçak Ara
+                            </h5>
+                            <label class="" for="bolge">Bölge / Otel / Kampanya</label>
+                            <input type="text" class="form-control form-control-sm" id="bolge"
+                                placeholder="Şehir, ilçe veya tatil bölgesi yazınız">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="start-date">Giriş Tarihi</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="start-date">Çıkış Tarihi</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="adult">Yetişkin</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="child">Çocuk</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="only-avaliable-hotels">
+                                <label class="form-check-label" for="only-avaliable-hotels">
+                                    Sadece Müsait Oteller
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="search-btn btn btn-primary">Otel Ara</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-panel" id="turPanel" style="display:none;">
+                        <div class="form-group col-lg-12 col-sm-12">
+                            <h5 class="search-panel-title">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Tur Ara
+                            </h5>
+                            <label class="" for="bolge">Bölge / Otel / Kampanya</label>
+                            <input type="text" class="form-control form-control-sm" id="bolge"
+                                placeholder="Şehir, ilçe veya tatil bölgesi yazınız">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="start-date">Giriş Tarihi</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="start-date">Çıkış Tarihi</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="" for="adult">Yetişkin</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="First name"
+                                        id="start-date">
+                                </div>
+                                <div class="col">
+                                    <label class="" for="child">Çocuk</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="only-avaliable-hotels">
+                                <label class="form-check-label" for="only-avaliable-hotels">
+                                    Sadece Müsait Oteller
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="search-btn btn btn-primary">Otel Ara</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+                    <div class="row m-0 p-0">
+                        <div class="homepage-slider-area m-0 p-0">
+                            <div class="slider">
+                                <img src="https://cdn.tatilsepeti.com/Files/Banner/0388/765x240sn-1.jpg" alt="">
+                                <img src="https://cdn.tatilsepeti.com/Files/Banner/0293/Nirvana-Hotels-23.08.24.jpg"
+                                    alt="">
+                                <img src="https://cdn.tatilsepeti.com/Files/Banner/0293/suenobelek850x2009.jpg" alt="">
+                            </div>
+                            <button class="prev-btn">
+                                <i class="fa-solid fa-angles-left"></i>
+                            </button>
+                            <button class="next-btn"><i class="fa-solid fa-angles-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="row card-slider-area mt-15 m-0 p-0">
+                        <div class="timed-slider-cards mt-15 p-0">
+                            <div class="cards-images col-lg-4 col-md-4 col-sm-6 col-12">
+                                <img id="cardImage" src="https://cdn.tatilsepeti.com/Files/Banner/0036/250x180R.jpg" />
+                                <p>%25 Ön Ödemeli Oteller Fırsatını Kaçırma! </p>
+                            </div>
+                            <div class="cards-images col-lg-4 col-md-4 col-sm-6 col-12">
+                                <img id="cardImage2"
+                                    src="https://cdn.tatilsepeti.com/Files/Banner/0038/Cippara-Agustos-Banner.jpg" />
+                                <p>Uçak Otelleri </p>
+                            </div>
+                            <div class="cards-images col-4">
+                                <img src="https://cdn.tatilsepeti.com/Files/Banner/0038/Cippara-Agustos-Banner.jpg" />
+                                <p>Seçili Tur ve Otellerde 7500 TL’ye Varan Chip Para Kazan! </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+    <section class="ads-banner-small-section mt-15">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <div class="col-12 ">
+                    <img src="	https://cdn.tatilsepeti.com/Files/Banner/0435/axess-12-taksit10.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hover-cards-section mt-15">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="hover-cards-box">
+                        <div class="hover-card hover-card1-img">
+                            <button class="hover-card-button">Kültür Turları</button>
+                            <div class="hover-card-content">
+                                <a href="#" class="hover-card-link">Baltık Başkentleri Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Yunan Adaları Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Akdeniz Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Nehir Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Norveç Fiyatları Gemi Turları</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="hover-cards-box">
+                        <div class="hover-card hover-card2-img">
+                            <button class="hover-card-button">Gemi Turları</button>
+                            <div class="hover-card-content">
+                                <a href="#" class="hover-card-link">Baltık Başkentleri Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Yunan Adaları Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Akdeniz Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Nehir Gemi Turları</a>
+                                <a href="#" class="hover-card-link">Norveç Fiyatları Gemi Turları</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="description-section mt-20">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <h2>Türkiye’nin Tatil Sebebi Tatilsepeti</h2>
+                <p>
+                    Tatilsepeti.com’da yüzlerce farklı tatil konseptinde otel ve uygun fiyatlı tatil önerileri sizler
+                    için bir araya geliyor. Her sene milyonlarca kişiye seyahat hizmetleri sunan markamız günden güne
+                    gelişerek ilerleyen tatil temalarıyla sizlere hayalinizdeki tatili gerçekleştirme fırsatı sunuyor.
+                    %50 indirim oranına varan ucuz tatiller, <a>uçak bileti</a>, otel hizmetleriyle
+                    kaliteli
+                    hizmetin tek
+                    adresi olma yolunda ilerliyor.
+                </p>
+                <h3>Ucuz Tatil</h3>
+                <p>
+                    İster yurt dışında ister yurt içinde tatil yapacak olun ilk akla gelen soru ‘‘ucuz tatil nasıl
+                    bulurum?’’ oluyor. Tatil temanızı belirledikten sonra yapmanız gereken bir sonraki adım en uygun
+                    tatil için güvenilir bir platformdan seçim yapmanız. Yurt içinde en ucuz ulaşım ve konaklama
+                    fırsatları için erken rezervasyon tarihlerini takip edebilirsiniz. Bunun için tatil planınızı
+                    önceden yapmış olmanız ve tatil rotanızı belirlemiş olmanız gerekir. Yurt dışında ucuz tatil yapmak
+                    için uçak ve konaklama fırsatlarını değerlendirebilir, birçok destinasyona cazip fiyatlarla
+                    sunduğumuz kampanya dönemlerinde rezervasyon yapmaya özen gösterebilirsiniz. Bunlara ek olarak
+                    vizesiz turlar arasından tercih yaparak tatil masraflarını en aza indirebilirsiniz. Vizesiz turların
+                    gözde bölgelerinden Yunan Adaları ve Mısır''a gitmek için Türkiye'de vize işlemi yaptırmanıza gerek
+                    yok. <a>Mısır Kapıda Vize Nasıl Alınır?</a> ve <a>Yunanistan Adaları Kapıda Vize Nasıl Alınır?</a>
+                    yazılarımızı
+                    okuyarak detaylı bilgi alabilirsiniz. Yurt içinde ucuz tatil yapmak için de aynı imkanlardan
+                    faydalanıp, doyasıya dinlencenin keyfini çıkarabilir veya ucuz yurtdışı turları arasından
+                    dilediğinizi seçebilirsiniz! Eğer arkadaş grubunuzla ya da kalabalık ailenizle tatil planı
+                    yapıyorsanız apart oteller ve <a>villa oteller</a> arasından bütçenize en uygun olanı
+                    tatilsepeti'nde
+                    bulabilirsiniz.
+                </p>
+                <h3>Tatil Fiyatları</h3>
+                <p>
+                    Kısıtlı zamanlar içerisinde hayalini kurduğunuz seyahati en ucuz tatil fırsatları ile
+                    gerçekleştirmek
+                    için Tatilsepeti.com’u tercih edebilirsiniz. Bir otel veya bir tur için rezervasyon yaptırmadan önce
+                    nasıl bir tatil yapmak istediğiniz hakkında kesin bir karara varmanız gerekir. Deniz tatili, kültür
+                    ve tarih tatili, doğa tatili, spa ve sağlık tatili, kayak tatili, gurme tatili gibi birçok seçenek
+                    arasından tatil ihtiyacınızı belirleyebilirsiniz. Ekonomik oteller, lüks oteller, Jakuzili oteller,
+                    <a>Kıbrıs otelleri</a>, <a>Bodrum otelleri</a> , Balayı otelleri veya yurt içi yurt dışı tur
+                    fırsatları mı gibi
+                    konularda iyice düşünüp net bir karara varmanız atacağınız bir sonraki adımı kolaylaştıracaktır.
+                    Tatil fırsatınızı yurt dışında değerlendirmek isterseniz <a>vizesiz ülkeler</a> arasından tercih
+                    yaparak
+                    daha uygun fiyatlı seyahat imkanı yakalayabilirsiniz. <a>Yeşil pasaport</a> sahipleri için vize
+                    engeli
+                    olmayan ülkeler listesini inceleyerek hak sahiplerinin gidebileceği ülkeleri inceleyebilirsiniz.
+                    Tatil temanızı belirledikten sonra tatil otelleri arasından tercih yapabilirsiniz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section mt-20" style="height: 200px;">
+        <div class="container">
+            <div class="footer-awards mt-15">
+                <div class="row m-0 p-0">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 award-box">
+                        <h4>Deneyenlerin en memnun kaldığı seçenek tatilsepeti.</h4>
+                        <img src="https://cdn.tatilsepeti.com/wwwroot/images/footer/footer-smile.jpg">
+                        <p>Nielsen tarafından 12 ilde 957 kişiyle yürütülen araştırma sonuçlarına dayanır.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 award-box">
+                        <h4>Yılın Yükselen Turizm Markası Seçildik!</h4>
+                        <img src="https://cdn.tatilsepeti.com/wwwroot/images/footer/footer-star.jpg">
+                        <p>Pazarlama Türkiye, Rise of Brands 2021</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 award-box">
+                        <h4>TURSAB ve IATA’ya üye resmi turizm portalıyız.</h4>
+                        <img src="https://cdn.tatilsepeti.com/wwwroot/images/footer/footer-globe.jpg" alt="">
+                        <p>Hayalinizdeki tatil için bize güvenebilirsiniz.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 award-box">
+                        <h4>444 44 20’yi arayın, tatil danışmanlarımız ile görüşün.</h4>
+                        <img src="https://cdn.tatilsepeti.com/wwwroot/images/footer/footer-phone.jpg" alt="">
+                        <p>Her gün 09:00 – 24:00 arasında hizmetinizdeyiz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="6">En Popüler Tatil Bölgeleri</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a>Ayaş Otelleri</a></td>
+                                    <td><a>Bodrum Otelleri</a></td>
+                                    <td><a>Marmaris Otelleri</a></td>
+                                    <td><a>Çeşme Otelleri</a></td>
+                                    <td><a>Didim Otelleri</a></td>
+                                    <td><a>Antalya Otelleri</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 left-copy">
+                        <p>DLT Turizm Seyahat Acentası Belge No : 3448</p>
+                        <p>Copyright 2004-2024 tatilsepeti.com Tüm hakları saklıdır.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 right-copy">
+                        <div class="">
+                            <i class="fa-solid fa-square-phone"></i>
+                        </div>
+                        <div class="">
+                            <a>444 44 20</a>
+                            <p>365 Gün Çağrı Desteği</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/home-slider.js"></script>
+    <script src="js/card-slider.js"></script>
+    <script src="js/tab-panel.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

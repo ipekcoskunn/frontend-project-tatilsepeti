@@ -153,6 +153,20 @@
     display: block;
 }
 
+.megamenu {
+    position: absolute;
+    top: 12%;
+    width: 70%;
+    background-color: #fff;
+    height: fit-content;
+    z-index: 9;
+    display: none;
+    padding: 20px;
+}
+
+.megamenu ul {
+    list-style: none;
+}
 
 
 

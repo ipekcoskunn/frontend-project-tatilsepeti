@@ -36,7 +36,7 @@
 
 .right-info-menu ul li {
     list-style: none;
-    padding: 0 18px;
+    padding: 0 10px;
     justify-content: center;
     font-size: 15px;
 }
@@ -690,6 +690,19 @@
         width: 1170px !important;
     }
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+    .header-right-info li {
+        font-size: 13px !important;
+    }
+
+    .right-info-menu ul li {
+        padding: 0 5px;
+    }
+}
+
 
 @media only screen and (max-width: 992px) {
     .header-main-menu {
